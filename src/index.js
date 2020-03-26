@@ -6,7 +6,9 @@ const app = express();
 /**
  * {origin: "url que pode acessar a aplicaçao"}
  */
-app.use(cors());
+app.use(cors({
+    origin: "https://bethehero-frontend.herokuapp.com/"
+}));
 app.use(express.json());
 app.use(routes);
 
