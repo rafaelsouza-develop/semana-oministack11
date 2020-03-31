@@ -1,14 +1,18 @@
 const connection = require('../database/connections');
 
+
+ 
 module.exports = {
 
     async index(request, response) {
-        const ong_id = request.headers.authorization;
 
-        const incidents = await connection('incidents')
-        .where('ong_id', ong_id)
+        const user_id = request.headers.authorization;
+
+        const pets = await connection('pet')
+        .where('user_id', user_id)
         .select('*')
 
-        return response.json({incidents})
+        return response.json({pets})
      }
 };
+
