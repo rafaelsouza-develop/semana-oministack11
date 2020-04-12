@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../../src/app');
 const connection = require('../../src/database/connections');
+const mongoose = require('mongoose');
 
 describe('ONG', () => {
     beforeEach(async () => {
@@ -27,4 +28,7 @@ describe('ONG', () => {
     expect(response.body).toHaveProperty('id');
     expect(response.body.id).toHaveLength(8);
     });
+
+
+    
 });

@@ -14,6 +14,7 @@ const PhotosController = require('./controllers/PhotosController')
 const router = express.Router();
 
 
+router.post('/session', SessionControler.create)
 
 router.post('/user',celebrate({
     [Segments.BODY]:  Joi.object().keys({
@@ -47,12 +48,14 @@ router.delete('/pet/:id', PetsController.delete)
 router.get('/profile', ProfileController.index)
 
 
-router.post('/session', SessionControler.create)
+
 
 
 router.post('/photos', multer(multerConfig).single('file'), PhotosController.uploadPhotosPet)
 router.get('/photos', PhotosController.listPhotos)
 router.delete('/photos/:id',PhotosController.deletePhotos)
+
+router.post('/testearduino', PhotosController.testeArduino)
 
 
 
