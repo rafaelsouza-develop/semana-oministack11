@@ -55,7 +55,7 @@ router.post('/photos', multer(multerConfig).single('file'), PhotosController.upl
 router.get('/photos', PhotosController.listPhotos)
 router.delete('/photos/:id',PhotosController.deletePhotos)
 
-router.post('/test', PhotosController.testeArduino)
+router.get('/test', PhotosController.testeArduino)
 
 
 
