@@ -78,7 +78,7 @@ module.exports = {
         const { latitude, longitude } = request.body;
 
         if(latitude){
-            console.log(latitude)
+            console.log(latitude.splice(4, 0, "."))
         }
 
         if(longitude){
@@ -88,3 +88,7 @@ module.exports = {
         return response.send()
     }
 }
+
+String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
