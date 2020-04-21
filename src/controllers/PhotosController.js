@@ -78,11 +78,11 @@ module.exports = {
         const { latitude, longitude } = request.body;
 
         if(latitude){
-            console.log(latitude.splice(4, 0, "."))
+            console.log(latitude.splice(3, 0, "."))
         }
 
         if(longitude){
-            console.log(longitude)
+            console.log(longitude.splice(3, 0, "."))
         }
 
         return response.send()
