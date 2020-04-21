@@ -77,11 +77,11 @@ module.exports = {
         console.log(request.body)
         const { latitude, longitude } = request.body;
 
-        if(data1){
+        if(latitude){
             console.log(latitude)
         }
 
-        if(data2){
+        if(longitude){
             console.log(longitude)
         }
 
