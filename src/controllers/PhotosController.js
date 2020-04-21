@@ -74,7 +74,7 @@ module.exports = {
     },
 
     async testeArduino(request, response) {
-        console.log(body)
+        console.log(request.body)
         const { data1, data2 } = request.body;
 
         if(data1){
