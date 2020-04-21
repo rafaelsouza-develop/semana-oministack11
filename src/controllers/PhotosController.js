@@ -75,14 +75,14 @@ module.exports = {
 
     async testeArduino(request, response) {
         console.log(request.body)
-        const { data1, data2 } = request.body;
+        const { latitude, longitude } = request.body;
 
         if(data1){
-            console.log(data1)
+            console.log(latitude)
         }
 
         if(data2){
-            console.log(data2)
+            console.log(longitude)
         }
 
         return response.send()
